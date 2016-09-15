@@ -1,0 +1,75 @@
+﻿body {
+    background-color: #eee;
+    padding: 51px 0;
+}
+
+.frame-container {
+    border-top: 1px solid #BBB;
+    border-bottom: 1px solid #BBB;
+    border-right: 1px solid #BBB;
+    height: 78px;
+}
+
+.buttons {
+    clear: both;
+    padding-top: 10px;
+}
+
+.scoreFrame {
+    width: 26px;
+    height: 27px;
+    float: left;
+    text-align: center;
+    border: none;
+    border-top: 1px solid #BBB;
+    border-bottom: 1px solid #BBB;
+    border-right: 1px solid #BBB;
+}
+
+    .scoreFrame:nth-child(2) {
+        border-right: none;
+    }
+
+.third {
+    border-top: 1px solid #BBB;
+    border-bottom: 1px solid #BBB;
+    border-right: none;
+    border-left: 1px solid #BBB;
+}
+
+.frameNumber {
+    background-color: #fef6a0;
+    height: 26px;
+    text-align: center;
+    margin-bottom: -1px;
+}
+
+.resultFrame {
+    background-color: #cbfcc6;
+    width: 100%;
+    text-align: center;
+    height: 24px;
+}
+
+.headerFrame {
+    background-color: #c6cffc;
+    height: 26px;
+    width: 70px;
+    text-align: center;
+    border-top: 1px solid #BBB;
+    border-right: 1px solid #BBB;
+    border-left: 1px solid #BBB;
+}
+
+    .headerFrame:last-child {
+        border-bottom: 1px solid #BBB;
+    }
+
+.containerShadow {
+    -webkit-box-shadow: 1px 1px 1px 1px #ccc;
+    -moz-box-shadow: 1px 1px 1px 1px #ccc;
+    box-shadow: 1px 1px 1px 1px #ccc;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+}

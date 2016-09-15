@@ -1,0 +1,77 @@
+﻿<div class="container col-lg-12">
+    <form ng-submit="vm.submit()">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="containerShadow">
+
+                <div class="pull-left">
+                    <div class="border headerFrame">
+                        Round
+                    </div>
+                    <div class="border headerFrame">
+                        Score
+                    </div>
+                    <div class="border headerFrame">
+                        Result
+                    </div>
+                </div>
+
+
+                <div class="pull-left">
+                    <div class="pull-left frame-container" ng-repeat="frame in vm.score.Frames">
+                        <div class="frameNumber border">
+                            {{frame.Round}}
+                        </div>
+
+                        <div>
+                            <input class="scoreFrame"
+                                   type="text"
+                                   ng-model="frame.First"
+                                   ng-change="vm.checkNumber(this)"
+                                   maxlength="1"
+                                   ng-disabled="vm.isCurrentRound($index)" />
+
+                            <input class="scoreFrame"
+                                   type="text"
+                                   ng-model="frame.Second"
+                                   ng-disabled="frame.First === 'X' && frame.Round !== 10 || vm.isCurrentRound($index)"
+                                   ng-change="vm.checkNumber(this)"
+                                   maxlength="1" />
+
+                            <input class="scoreFrame third"
+                                   type="text"
+                                   ng-if="frame.Round == 10"
+                                   ng-model="frame.Third"
+                                   ng-change="vm.checkNumber(this)"
+                                   maxlength="1"
+                                   ng-disabled="vm.checkLastRound(this)" />
+                        </div>
+
+                        <div class="pull-left resultFrame border">
+                            {{frame.Score > 0 ? frame.Score : ""}}
+                        </div>
+
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="color" type="submit" id="submit" value="submit">Save Round</button>
+                    <button type="button" ng-click="vm.reset()">Reset</button>
+                </div>
+                <div>
+                    <p>
+                        <br />
+                        How to insert score and get result:
+                        <br />
+                        Click "Save Round" to get the rounds result
+                        <br />
+                        Score: use numbers between 0-9
+                        <br />
+                        Spare: / or remaining number
+                        <br />
+                        Strike: X                       
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

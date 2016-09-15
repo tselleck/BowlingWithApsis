@@ -1,0 +1,83 @@
+﻿@border: 1px solid #bbb;
+@boxShadow: 1px 1px 1px 1px #ccc;
+@height: 26px;
+@text-center: center;
+@border-none: none;
+@padding-top: 10px;
+@clear: both;
+
+body {
+    background-color: #eee;
+    padding: 51px 0;
+}
+
+.frame-container {
+    border-top: @border;
+    border-bottom: @border;
+    border-right: @border;
+    height: 78px;
+}
+
+.buttons{
+    clear: @clear;
+    padding-top: @padding-top;
+}
+
+.scoreFrame {
+    width: @height;
+    height: 27px;
+    float: left;
+    text-align: @text-center;
+    border: @border-none;
+    border-top: @border;
+    border-bottom: @border;
+    border-right: @border;
+
+    &:nth-child(2) {
+        border-right: @border-none;
+    }
+}
+
+.third {
+    border-top: @border;
+    border-bottom: @border;
+    border-right: @border-none;
+    border-left: @border;
+}
+
+.frameNumber {
+    background-color: #fef6a0;
+    height: @height;
+    text-align: @text-center;
+    margin-bottom: -1px;
+}
+
+.resultFrame {
+    background-color: #cbfcc6;
+    width: 100%;
+    height: @height;
+    text-align: @text-center;
+}
+
+.headerFrame {
+    background-color: #c6cffc;
+    height: @height;
+    width: 70px;
+    text-align: @text-center;
+    border-top: @border;
+    border-right: @border;
+    border-left: @border;
+
+    &:last-child {
+        border-bottom: @border;
+    }
+}
+
+.containerShadow {
+    -webkit-box-shadow: @boxShadow;
+    -moz-box-shadow: @boxShadow;
+    box-shadow: @boxShadow;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+}
